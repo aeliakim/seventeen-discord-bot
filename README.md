@@ -1,8 +1,8 @@
-# SEVENTEEN Discord Twitter Bot
+# SEVENTEEN Discord Bot
 
 ## Project Overview
 
-This is a Discord bot designed to automatically fetch and post the latest updates from SEVENTEEN's official X (formerly Twitter) account (`@pledis_17`) directly to a specified Discord channel. It aims to keep fans updated in real-time without needing to constantly check Twitter.
+This is a Discord bot designed to automatically fetch and post the latest updates from SEVENTEEN's social media account directly to a specified Discord channel. It aims to keep fans updated in real-time without needing to constantly check the official account. Currently, this bot fetch the updates from SEVENTEEN's X (Twitter) official account.
 
 ## Features
 
