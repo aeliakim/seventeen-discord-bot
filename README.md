@@ -106,4 +106,4 @@ If you found a bug or an issue, please report by opening a new issue on this rep
 
 ## License
 
-This project is open-source and available under the MIT License. (You can specify your preferred license here).
+This project is open-source and available under the MIT License.
