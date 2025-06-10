@@ -6,7 +6,7 @@ This is a Discord bot designed to automatically fetch and post the latest update
 
 ## Features
 
-- **Real-time Updates:** Automatically checks for new tweets from `@pledis_17`.
+- **Fetch Updates:** Automatically checks for new tweets from `@pledis_17` every 20 minutes due to Twitter API rate limit.
 - **Discord Integration:** Posts new tweets to a designated Discord channel.
 - **Duplicate Prevention:** Utilizes a SQLite database to prevent reposting of already shared tweets.
 - **Rich Embeds:** Formats tweets into visually appealing Discord embeds, including author information, tweet text, and timestamp.
@@ -93,6 +93,9 @@ node src/bot.js
 ```
 
 To stop the bot, press `Ctrl + C` in your terminal.
+
+### Persistent Run (Bot run continuously)
+To make the bot run continuously, you can use [PM2](https://pm2.keymetrics.io/docs/usage/quick-start/) or deploy it in any cloud server.
 
 ## Future Enhancements
 
