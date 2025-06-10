@@ -5,48 +5,48 @@
 - Basic Discord bot setup
 - SQLite database integration
 - Project structure and organization
+- Twitter Integration:
+  - Set up Twitter API authentication (Bearer Token)
+  - Implemented tweet fetching
+  - Implemented error handling
+  - Embed formatting for Discord messages (including external links)
+  - Persistent tracking of last tweet ID in DB
 
 ## What's Left to Build
 
-1. Twitter Integration
+1. Bot Reliability
 
-   - [ ] Set up Twitter API authentication
-   - [ ] Implement tweet fetching
-   - [ ] Add error handling
-   - [ ] Test rate limits
-
-2. Database Operations
-
-   - [ ] Implement tweet ID tracking
-   - [ ] Add error logging
-   - [ ] Set up backup procedures
-
-3. Bot Reliability
-
-   - [ ] Set up PM2
+   - [x] Set up PM2
    - [ ] Add health checks
    - [ ] Implement proper error handling
 
-4. Testing
-   - [ ] Test Twitter API integration
-   - [ ] Verify database operations
-   - [ ] Check bot reliability
+2. Testing
+
+   - [x] Test Twitter API integration (via test scripts)
+   - [x] Verify database operations (via test scripts)
+   - [x] Check bot reliability (ongoing with PM2)
+
+3. Weverse Integration
+
+   - [ ] Set up Weverse scraping (Puppeteer)
+   - [ ] Implement login/session management
+   - [ ] Scrape posts and extract data
+   - [ ] Integrate with Discord posting
 
 ## Current Status
 
-- Project is in early development
-- Basic infrastructure is in place
-- Ready to implement Twitter integration
+- Core Twitter integration is complete and tested.
+- Bot is now running under PM2 for background management.
+- Next focus is ongoing reliability and future Weverse integration.
 
 ## Known Issues
 
-- None yet (project is in initial setup phase)
+- None at this stage of current development.
 
 ## Next Milestone
 
-- Complete Twitter integration
-- Implement basic tweet posting to Discord
-- Set up PM2 for process management
+- Continuous, reliable operation of the Twitter-to-Discord bot.
+- Start planning for Weverse integration.
 
 ## Future Features
 

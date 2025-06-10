@@ -2,8 +2,10 @@ const Database = require("better-sqlite3");
 const path = require("path");
 
 // Create or open the database file
-const db = new Database(path.resolve(__dirname, "weverse.db"));
+const db = new Database(path.resolve(__dirname, "twitter.db"));
 
+// --- Weverse-related code commented out for now ---
+/*
 // Create a table for posts if it doesn't exist
 db.prepare(
   `
@@ -58,8 +60,35 @@ function savePost({
     share_url
   );
 }
+*/
+
+// --- Twitter integration: settings table for last tweet ID ---
+db.prepare(
+  `
+  CREATE TABLE IF NOT EXISTS settings (
+    key TEXT PRIMARY KEY,
+    value TEXT
+  )
+`
+).run();
+
+function getLastTweetId() {
+  const row = db
+    .prepare("SELECT value FROM settings WHERE key = ?")
+    .get("lastTweetId");
+  return row ? row.value : null;
+}
+
+function setLastTweetId(id) {
+  db.prepare("INSERT OR REPLACE INTO settings (key, value) VALUES (?, ?)").run(
+    "lastTweetId",
+    id
+  );
+}
 
 module.exports = {
-  postExists,
-  savePost,
+  getLastTweetId,
+  setLastTweetId,
+  // postExists,
+  // savePost,
 };
