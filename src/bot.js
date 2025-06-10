@@ -45,7 +45,8 @@ client.once("ready", () => {
           .setColor(0x1da1f2)
           .setAuthor({
             name: `${tweet.author.name} (@${tweet.author.username})`,
-            iconURL: tweet.author.profile_image_url || undefined,
+            iconURL:
+              "https://pbs.twimg.com/profile_images/1922276483554541569/TZj_KOCg_normal.jpg",
             url: tweet.tweet_url,
           })
           .setDescription(tweet.text) // Use the original tweet.text
@@ -77,7 +78,7 @@ client.once("ready", () => {
     } catch (err) {
       console.error("Error fetching or posting tweet:", err);
     }
-  }, 15 * 60 * 1000); // 15 minutes
+  }, 20 * 60 * 1000); // 20 minutes
 });
 
 // // event listener for every new message sent in any server the bot is in
