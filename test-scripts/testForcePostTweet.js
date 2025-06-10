@@ -73,8 +73,14 @@ async function testForcePostTweet() {
       externalContent = sampleTweet.external_urls.join("\n");
     }
 
-    // Send the main embed first
-    await channel.send({ embeds: [embed] });
+    // Construct the content for the first message (main embed + role tag)
+    let mainMessageContent = "Forced Test Post:";
+    if (process.env.DISCORD_ROLE_ID) {
+      mainMessageContent = `<@&${process.env.DISCORD_ROLE_ID}> ${mainMessageContent}`;
+    }
+
+    // Send the main embed first with role tag
+    await channel.send({ content: mainMessageContent, embeds: [embed] });
 
     // Send external URLs as a separate message if they exist
     if (externalContent) {
